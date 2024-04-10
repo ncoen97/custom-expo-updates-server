@@ -78,6 +78,7 @@ export default async function manifestEndpoint(req: NextApiRequest, res: NextApi
           protocolVersion
         );
       } else if (updateType === UpdateType.ROLLBACK) {
+        console.warn("Rollback incoming...", {runtimeVersion})
         await putRollBackInResponseAsync(req, res, updateBundlePath, protocolVersion);
       }
     } catch (maybeNoUpdateAvailableError) {
