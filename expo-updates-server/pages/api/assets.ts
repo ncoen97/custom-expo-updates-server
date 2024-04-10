@@ -61,7 +61,7 @@ export default async function assetsEndpoint(req: NextApiRequest, res: NextApiRe
 
   try {
     const asset = fs.readFileSync(assetPath, null);
-
+    console.warn("All good!!", {runtimeVersion, assetPath})
     res.statusCode = 200;
     res.setHeader(
       'content-type',

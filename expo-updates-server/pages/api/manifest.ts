@@ -68,6 +68,7 @@ export default async function manifestEndpoint(req: NextApiRequest, res: NextApi
   try {
     try {
       if (updateType === UpdateType.NORMAL_UPDATE) {
+        console.warn("All good!!", {runtimeVersion})
         await putUpdateInResponseAsync(
           req,
           res,
